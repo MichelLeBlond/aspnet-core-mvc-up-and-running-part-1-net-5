@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ASPCourse1.Models
 {
@@ -15,7 +12,7 @@ namespace ASPCourse1.Models
         public string Name { get; set; }
         [DisplayName("Display Order")]
         [Required]
-        [Range(1,int.MaxValue,ErrorMessage = "Display Order for Category must be greater than 0")]
+        [Range(1, int.MaxValue, ErrorMessage = "Display Order for Category must be greater than 0")]
         public int DisplayOrder { get; set; }
     }
 }

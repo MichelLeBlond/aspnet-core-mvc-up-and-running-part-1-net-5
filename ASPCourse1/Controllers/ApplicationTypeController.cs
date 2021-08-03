@@ -1,11 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ASPCourse1.Data;
+﻿using ASPCourse1.Data;
 using ASPCourse1.Models;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace ASPCourse1.Controllers
 {
