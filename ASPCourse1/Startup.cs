@@ -1,3 +1,4 @@
+using System;
 using ASPCourse1.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -22,6 +23,16 @@ namespace ASPCourse1
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddHttpContextAccessor();
+            services.AddSession(Options =>
+            {
+                Options.IdleTimeout = TimeSpan.FromMinutes(10);
+                Options.Cookie.HttpOnly = true;
+                Options.Cookie.IsEssential = true;
+
+
+            });
+
             services.AddControllersWithViews();
         }
 
@@ -42,8 +53,9 @@ namespace ASPCourse1
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseSession();
             app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {
