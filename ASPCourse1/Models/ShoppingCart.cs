@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ASPCourse1.Models
+﻿namespace ASPCourse1.Models
 {
     public class ShoppingCart
     {

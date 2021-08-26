@@ -7,7 +7,6 @@ using System.Linq;
 using ASPCourse1.Data;
 using ASPCourse1.Models.ViewModels;
 using ASPCourse1.Utility;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
 namespace ASPCourse1.Controllers
