@@ -2,9 +2,11 @@
 using ASPCourse1.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ASPCourse1.Controllers
 {
+    [Authorize(Roles = WC.AdminRole)]
     public class ApplicationTypeController : Controller
     {
         private readonly ApplicationDbContext _db;

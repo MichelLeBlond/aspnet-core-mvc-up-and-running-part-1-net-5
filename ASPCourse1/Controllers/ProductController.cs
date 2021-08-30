@@ -5,13 +5,16 @@ using System.Linq;
 using ASPCourse1.Data;
 using ASPCourse1.Models;
 using ASPCourse1.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace ASPCourse1.Controllers
 {
+   [Authorize(Roles= WC.AdminRole)]
     public class ProductController : Controller
     {
         private readonly ApplicationDbContext _db;
